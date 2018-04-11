@@ -5,6 +5,7 @@
  */
 package Presentacion;
 
+import Negocio.Control.ConexionBD;
 import Negocio.Control.Persona;
 import javax.swing.JOptionPane;
 import Negocio.Modelo.Agenda;
@@ -364,8 +365,21 @@ public class InterfazFormulario extends javax.swing.JFrame {
                 new InterfazFormulario().setVisible(true);
             }
         });
+        
+        ConexionBD vc = new ConexionBD();
+        
+        vc.setConexionSql("jdbc:mysql:thin://localhost:3306/MySQL56","root","sist25");
+        System.out.println("---------- Metadatos de la consulta----------");
+        vc.getMetaDataTable("select * from staff");
+        System.out.println("--------- mostrando informacion--------");
+        vc.getDatosConsulta("select * from staff");
+        vc.senteciasNoSlect("create table tmp00 (id numeric)");
+        vc.closeConexion();
     }
+    
+    
 
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonBuscar;
     private javax.swing.JButton ButtonEliminar;

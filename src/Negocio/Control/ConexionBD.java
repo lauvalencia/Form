@@ -16,7 +16,6 @@ import java.sql.Statement;
  */
 public class ConexionBD {
 
-public class ConexionBd {
     private String URLAccess = "jdbc:mysql:thin:@localhost:3306:XE";
     private String usuario ="root";
     private String clave="sist25";
@@ -124,6 +123,6 @@ public class ConexionBd {
         }
     }
  
-            
+      
 }
-}
+
