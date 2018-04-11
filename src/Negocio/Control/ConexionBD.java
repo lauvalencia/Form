@@ -123,18 +123,7 @@ public class ConexionBd {
             System.out.println("   error"+ ex.toString());
         }
     }
-    
-   /* public static void main(String[] args) {
-        ConexionBd vc = new ConexionBd();
-        
-        vc.setConexionSql("jdbc:mysql:thin://localhost:3306/MySQL56","root","sist25");
-        System.out.println("---------- Metadatos de la consulta----------");
-        vc.getMetaDataTable("select * from staff");
-        System.out.println("--------- mostrando informacion--------");
-        vc.getDatosConsulta("select * from staff");
-        vc.senteciasNoSlect("create table tmp00 (id numeric)");
-        vc.closeConexion();
-    }*/
+ 
             
 }
 }
